@@ -1,43 +1,16 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'cosmocalendar'
-
-    publishedGroupId = 'com.github.applikeysolutions'
-    libraryName = 'Cosmocalendar'
-    artifact = 'cosmocalendar'
-
-    libraryDescription = 'Customizable calendar on Android'
-
-    siteUrl = 'https://github.com/AppliKeySolutions/CosmoCalendar'
-    gitUrl = 'https://github.com/AppliKeySolutions/CosmoCalendar.git'
-
-    libraryVersion = '1.0.4'
-
-    developerId = 'devilbrain666'
-    developerName = 'Ostapenko Yura'
-    developerEmail = 'ostapenko1990yura@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
+group='com.github.parveenkumardeeva'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 6
+        versionName "1.0.5"
     }
     buildTypes {
         release {
@@ -53,7 +26,3 @@ dependencies {
     implementation "com.google.android.material:material:1.2.0-alpha03"
     implementation "androidx.recyclerview:recyclerview:1.1.0"
 }
-
-// Place it at the end of the file
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
